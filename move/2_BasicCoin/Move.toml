@@ -1,0 +1,11 @@
+[package]
+name = "BasicCoin"
+version = "0.0.0"
+
+[addresses]
+NamedAddr = "0xC0FFEE"
+Std = "0x1"
+
+[dependencies]
+MoveStdlib = {git = "https://github.com/move-language/move.git", subdir = "language/move-stdlib", rev = "aba7070cf6f553f85ac6874da1e3630bbc32e44a", addr_subst = {"std" = "0x1"}}
+# MoveStdlib = {git = "https://github.com/diem/diem.git", subdir = "language/move-stdlib", rev = "56ab033cc403b489e891424a629e76f643d4fb6b", addr_subst = {"Std" = "0x1"}}

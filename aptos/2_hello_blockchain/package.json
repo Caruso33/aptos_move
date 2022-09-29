@@ -1,0 +1,27 @@
+{
+  "name": "2_hello_blockchain",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "node": "aptos node run-local-testnet --with-faucet",
+    "cargo:install": "cargo install --path .",
+    "test": "cargo test",
+    "run": "cargo run --bin hello-blockchain -- Message.mv",
+    "move:compile": "aptos move compile --package-dir ./move --named-addresses HelloBlockchain=__ALICE_ADDRESS__",
+    "move:test": "aptos move test --package-dir ./move",
+    "move:cpMessage": "cp ./move/build/Examples/bytecode_modules/Message.mv ./",
+    "node:install": "yarn",
+    "node:run": "node --loader ts-node/esm hello_blockchain.ts Message.mv"
+  },
+  "dependencies": {
+    "@types/node": "^17.0.21",
+    "cross-fetch": "^3.1.5",
+    "js-sha3": "^0.8.0",
+    "tweetnacl": "^1.0.3"
+  },
+  "devDependencies": {
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.4"
+  }
+}

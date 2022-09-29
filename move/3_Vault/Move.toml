@@ -1,0 +1,13 @@
+[package]
+name = "Vault"
+version = "0.0.0"
+authors = ["Tobias Leinss <caruso33@web.de>"]
+
+[dependencies]
+AptosFramework = { git = "https://github.com/aptos-labs/aptos-core.git", subdir = "aptos-move/framework/aptos-framework/", rev = "devnet", addr_subst = {"std" = "0x1"}}
+
+[addresses]
+Std = "0x1"
+Owner = "0x1337"
+Deployment = "0x1338"
+TestAccount = "0x1339"
